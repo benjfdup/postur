@@ -1,0 +1,14 @@
+Backend:
+1. Implement events backend (event creation and event modification)
+
+Chats Page:
+1. Implement working events groupchats
+
+User Authentication:
+1. Transition to SMS OTP
+2. Add email and verification.
+
+Maps:
+1. Add custom event icons that render according to input event information
+2. Fix map crashing issue when you switch between pages to fast
+3. Add events needs to communicate with backend
