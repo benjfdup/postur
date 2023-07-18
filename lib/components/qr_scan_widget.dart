@@ -16,7 +16,7 @@ class _QRViewState extends State<QRView> {
 
   // In order to get hot reload to work we need to pause the camera if the platform
   // is android, or resume the camera if the platform is iOS.
-  
+
   @override
   Widget build(BuildContext context) {
     return MobileScanner(
@@ -27,10 +27,8 @@ class _QRViewState extends State<QRView> {
       onDetect: (capture) {
         final List<Barcode> barcodes = capture.barcodes;
         int numCodes = barcodes.length;
-        Navigator.push(
-        context,
-          MaterialPageRoute(
-            builder: (context) => const ScanResultPage()));
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const ScanResultPage()));
       },
     );
   }
