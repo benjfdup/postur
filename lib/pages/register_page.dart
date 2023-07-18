@@ -1,8 +1,9 @@
-import 'package:auth_test/components/my_textfield.dart';
+import '../components/my_textfield.dart';
+import '../src/colors.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:auth_test/components/my_button.dart';
+import '../components/my_button.dart';
 
 class RegisterPage extends StatefulWidget {
   final Function()? onTap;
@@ -26,8 +27,7 @@ class _RegisterPageState extends State<RegisterPage> {
       builder: (context) {
         return const Center(
           child: CircularProgressIndicator(
-            valueColor:
-                AlwaysStoppedAnimation<Color>(Color.fromARGB(255, 255, 17, 0)),
+            valueColor: AlwaysStoppedAnimation<Color>(absentRed),
           ),
         );
       },
@@ -41,6 +41,8 @@ class _RegisterPageState extends State<RegisterPage> {
           email: emailController.text,
           password: passwordController.text,
         );
+
+        // after creating user, create a document for the user in the user's collection.
       } else {
         // show error message, passwords do not match
         showErrorMessage("Passwords don't match");
@@ -98,7 +100,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     style: TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 30,
-                      color: Color.fromARGB(255, 255, 17, 0),
+                      color: absentRed,
                     ),
                   ),
                   const SizedBox(height: 50),
