@@ -1,4 +1,4 @@
-import 'package:auth_test/src/colors.dart';
+import '../src/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 // import 'package:flutter/services.dart';
@@ -13,15 +13,13 @@ class ScanResultPage extends StatelessWidget {
     return ColoredBox(
       color: Colors.white,
       child: Center(
-        child:
-          IconButton(
-            icon: const Icon(Icons.check_circle, color: Colors.green),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            iconSize: 300,
-          )
-      ),
+          child: IconButton(
+        icon: const Icon(Icons.check_circle, color: Colors.green),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        iconSize: 300,
+      )),
     );
   }
 }
